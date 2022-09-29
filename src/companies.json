@@ -1,11 +1,1 @@
-[
-  { "id": 1, "name": "Kuda", "location": "Lagos" },
-  { "id": 3, "name": "Paga", "location": "Lagos" },
-  { "id": 4, "name": "Interswitch", "location": "Lagos" },
-  { "id": 5, "name": "Paystack", "location": "Lagos" },
-  { "id": 6, "name": "PiggyVest", "location": "Lagos" },
-  { "name": "SpaceZ", "location": "Everywhere", "id": 1664395792212 },
-  { "name": "Paga", "location": "Lagos", "id": 1664396065898 },
-  { "name": "Flutterwave", "location": "Lagos", "id": 1664396173450 },
-  { "name": "Accelerex", "location": "VI", "id": 1664396364329 }
-]
+[{"id":3,"name":"Paga","location":"Lagos"},{"id":4,"name":"Interswitch","location":"Lagos"},{"id":5,"name":"Paystack","location":"Lagos"},{"id":6,"name":"PiggyVest","location":"Lagos"},{"name":"Paga","location":"Lagos","id":1664396065898},{"name":"Flutterwave","location":"Lagos","id":1664396173450},{"name":"Accelerex","location":"VI","id":1664396364329},{"name":"Dann","location":"Imo","id":1664445808710},{"name":"Blah Blah Blahh","location":"Abuja","id":1664451442273}]

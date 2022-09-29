@@ -7,8 +7,9 @@ dotenv.config()
 const app = express();
 
 const port = process.env.PORT;
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json())
+
 
 //serve form
 app.get('/', (req, res) => {
@@ -33,6 +34,7 @@ app.post('/', (req, res) => {
     const company = { ...req.body, id: id }
     fs.readFile('./src/companies.json', function (err, data) {
         const newData = JSON.parse(data)
+        console.log(newData)
         newData.push(company)
         fs.writeFile('./src/companies.json', JSON.stringify(newData), function (err, result) {
             if (err) console.log('error', err);
@@ -76,7 +78,7 @@ app.delete('/:id', (req, res) => {
 //update company by id
 app.patch('/:id', (req, res) => {
     const { id } = req.params;
-    console.log(id)
+    // console.log(id)
     const { name, location } = req.body;
     fs.readFile('./src/companies.json', (err, data) => {
         const companies = JSON.parse(data)
