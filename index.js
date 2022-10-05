@@ -1,14 +1,16 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const bodyParser = require("body-parser");
-const fs = require('fs')
+const fs = require('fs');
+const router = require('./src/routes/company_route')
+
 
 dotenv.config()
 const app = express();
 
 const port = process.env.PORT;
-app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
+app.use(express.urlencoded({ extended: false }));
+app.use(router)
 
 
 //serve form
@@ -18,15 +20,15 @@ app.get('/', (req, res) => {
 })
 
 //get all companies
-app.get('/companies', (req, res) => {
-    fs.readFile('./src/companies.json', (err, data) => {
-        if (err) {
-            console.log(err)
-        }
-        res.send(JSON.parse(data))
-        res.end()
-    })
-});
+// app.get('/companies', (req, res) => {
+//     fs.readFile('./src/companies.json', (err, data) => {
+//         if (err) {
+//             console.log(err)
+//         }
+//         res.send(JSON.parse(data))
+//         res.end()
+//     })
+// });
 
 //post company
 app.post('/', (req, res) => {
